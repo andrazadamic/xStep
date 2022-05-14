@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SingleChildScrollView(
       child: Column(
         children: [
           const SizedBox(
@@ -111,7 +111,7 @@ class HomePage extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           Padding(
-            padding: const EdgeInsets.fromLTRB(20.0, 0, 20.0, 0),
+            padding: const EdgeInsets.fromLTRB(30.0, 0, 30.0, 0),
             child: SizedBox(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -145,6 +145,54 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(30.0, 0, 30.0, 0),
+            child: Container(
+                height: 200,
+                decoration: BoxDecoration(
+                    color: const Color(0x808FD694),
+                    border: Border.all(color: Colors.black, width: 1),
+                    borderRadius: BorderRadius.circular(25)),
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(15.0, 20.0, 15.0, 0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Text(
+                            "Daily Thousand",
+                            style: TextStyle(fontSize: 20),
+                          ),
+                          Column(
+                            children: const [
+                              Text(
+                                "Time left:",
+                                style: TextStyle(fontSize: 20),
+                              ),
+                              Text("Time")
+                            ],
+                          )
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      const Text(
+                        "0/1000 steps",
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold),
+                      ),
+                      const Text("Progress bar")
+                    ],
+                  ),
+                )),
           )
         ],
       ),
