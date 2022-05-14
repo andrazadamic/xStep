@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "714848349722",
+    "firebase_url": "https://xstep-3ea60-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "xstep-3ea60",
+    "storage_bucket": "xstep-3ea60.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:714848349722:android:242e425865d1fe01ab2ba3",
+        "android_client_info": {
+          "package_name": "com.example.x_step"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "714848349722-ujo95qm0uqsco43r9lccoga996r0aj09.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAecDKOjPnGT3n73Cc1JWaXJ_div6juCu0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "714848349722-ujo95qm0uqsco43r9lccoga996r0aj09.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "714848349722-hk7an7obum8bq5q4utr38r79p9g254qr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.xStep"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
