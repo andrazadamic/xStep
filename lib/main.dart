@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'home_page.dart';
-import 'leaderboard_page.dart';
-import 'games_page.dart';
+import 'pages/games_page.dart';
+import 'pages/leaderboard_page.dart';
+import 'pages/home_page.dart';
 
 void main() => runApp(const MyApp());
 
@@ -36,7 +36,7 @@ class _MyAppState extends State<MyApp> {
               BottomNavigationBarItem(
                   icon: Icon(Icons.bar_chart), label: "Leaderboard"),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.beenhere), label: "Achivements")
+                  icon: Icon(Icons.gamepad), label: "Games"),
             ],
             currentIndex: _selectedIndex,
             onTap: _onItemTapped,
