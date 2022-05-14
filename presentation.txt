@@ -1,0 +1,3 @@
+PP:
+Hey...
+We decided to make an app for mobile devices, that encourages exercise via walking aka gathering points through steps that are counted on the phone. The points can then be used in the second part of the app that consists of fun games, where you can double your coins or lose them. A big part of the game are also the Challenges and Achievements, that additionally motivates the user to put in work. We made the app with ... using ... ... . 
