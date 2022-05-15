@@ -4,11 +4,10 @@ import 'pages/leaderboard_page.dart';
 import 'pages/home_page.dart';
 
 class PagesPage extends StatefulWidget {
-  const PagesPage({Key? key, required this.user}) : super(key: key);
+  const PagesPage({Key? key}) : super(key: key);
 
-  final String user;
 
-  static const List<Widget> _pages = <Widget>[
+  static final List<Widget> _pages = <Widget>[
     HomePage(),
     LeaderboardPage(),
     GamesPage()

@@ -1,7 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/widgets.dart';
+import '../logic/users.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -49,13 +47,13 @@ class HomePage extends StatelessWidget {
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
-                  children: const [
-                    Text(
+                  children: [
+                    const Text(
                       "STEPS TODAY",
                       style: TextStyle(fontSize: 20),
                     ),
                     Text(
-                      "10000",
+                      getUsersSteps(),
                       style:
                           TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                     )
@@ -67,13 +65,13 @@ class HomePage extends StatelessWidget {
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
-                  children: const [
-                    Text(
+                  children: [
+                    const Text(
                       "POINTS TODAY",
                       style: TextStyle(fontSize: 20),
                     ),
                     Text(
-                      "10000",
+                      getUsersPoints(),
                       style:
                           TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                     )

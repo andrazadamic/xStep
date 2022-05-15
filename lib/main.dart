@@ -75,12 +75,14 @@ class _MyAppState extends State<MyApp> {
 
   void userLogin(String username, BuildContext cont) {
     if (checkIfUserExists(username)) {
+      setCurrentUser(username);
       Navigator.push(cont,
-          MaterialPageRoute(builder: (cont) => PagesPage(user: username)));
+          MaterialPageRoute(builder: (cont) => PagesPage()));
     } else {
       createUser(username);
+      setCurrentUser(username);
       Navigator.push(cont,
-          MaterialPageRoute(builder: (cont) => PagesPage(user: username)));
+          MaterialPageRoute(builder: (cont) => PagesPage()));
     }
   }
 }
