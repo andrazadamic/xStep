@@ -1,8 +1,11 @@
+import 'dart:collection';
+
 import 'package:flutter/material.dart';
 
-var _users = {
+Map _users = {
   "ajo": <String>["ajo", "4761", "69"],
-  "matjec": <String>["matjec", "28980", "420"]
+  "matjec": <String>["matjec", "28980", "420"],
+  "timmy": <String>["timmy", "1449", "21"]
 };
 var _curr_user = "";
 
@@ -14,8 +17,15 @@ bool checkIfUserExists(String username) {
   }
 }
 
+Map sort(Map users) {
+  return SplayTreeMap<String, dynamic>.from(
+    users, (keys1, keys2) => int.parse(users[keys2]![1]).compareTo(int.parse(users[keys1]![1]))
+  );
+}
+
 void createUser(String username) {
   _users[username] = [username, "0", "0"];
+
 }
 
 void setCurrentUser(String username) {
@@ -31,8 +41,9 @@ String getUsersSteps() {
 }
 
 Widget createLeaderboard() {
+  _users = sort(_users);
   return Column(
-      children: _users.entries.map((entry) {
+    children: _users.entries.map((entry) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(15.0, 10.0, 15.0, 10.0),
       child: SizedBox(

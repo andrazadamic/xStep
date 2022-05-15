@@ -17,7 +17,7 @@ class LeaderboardPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: const [
             Text(
-              "Xstep",
+              "xStep",
               textAlign: TextAlign.left,
               style: TextStyle(
                   fontSize: 25,
