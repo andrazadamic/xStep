@@ -1,6 +1,9 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:x_step/pages_page.dart';
 import 'logic/users.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() => runApp(const MyApp());
 
@@ -18,19 +21,53 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "xStep",
-      home: SafeArea(
-        child: Scaffold(
-          body: Column(
+      home: Scaffold(
+        body: SafeArea(
+          child: Column(
             children: [
-              TextField(
-                controller: usernameController,
+              const SizedBox(height: 100),
+              Text(
+                "xStep",
+                style: GoogleFonts.rubik(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 70,
+                  color: const Color.fromRGBO(88, 135, 89, 1),
+                )
               ),
-              Builder(
-                builder: (context) => TextButton(
-                  onPressed: () => userLogin(usernameController.text, context),
-                  child: const Text("Login")
+              const SizedBox(height: 70),
+              Padding(
+                padding: EdgeInsets.fromLTRB(40, 0, 40, 0),
+                child: Column(
+                  children: [
+                    const Text(
+                      "Choose your username:",
+                    ),
+                    TextField(
+                      decoration: InputDecoration(
+                        fillColor: Colors.amber
+                      ),
+                      controller: usernameController,
+                    ),
+                    const SizedBox(height: 30),
+                    Builder(
+                      builder: (context) => TextButton(
+                        onPressed: () => userLogin(usernameController.text, context),
+                        style: ButtonStyle(
+                          shadowColor: MaterialStateProperty.all(Colors.black),
+                          backgroundColor: MaterialStateProperty.all(const Color.fromRGBO(243, 193, 120, 1)),
+                        ),
+                        child: Text(
+                          "ENTER",
+                          style: GoogleFonts.rubik(
+                            color: Colors.black,
+                            fontSize: 30,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-              ),
+              )
             ],
           ),
         ),

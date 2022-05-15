@@ -26,9 +26,8 @@ class _PagesPageState extends State<PagesPage> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "xStep",
-      home: SafeArea(
-        child: Scaffold(
-          body: PagesPage._pages.elementAt(_selectedIndex),
+      home: Scaffold(
+          body: SafeArea(child: PagesPage._pages.elementAt(_selectedIndex),),
           bottomNavigationBar: BottomNavigationBar(
             selectedItemColor: Colors.amber.shade700,
             items: const <BottomNavigationBarItem>[
@@ -42,7 +41,6 @@ class _PagesPageState extends State<PagesPage> {
             onTap: _onItemTapped,
           ),
         ),
-      ),
     );
   }
 
