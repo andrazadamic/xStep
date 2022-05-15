@@ -1,0 +1,31 @@
+Achievements:
+
+PROFESSIONAL WALKER 1 - Walk 10000 steps.
+PROFESSIONAL WALKER 2 - Walk 100000 steps.
+PROFESSIONAL WALKER 3 - Walk 500000 steps.
+GOD ON FOOT - Walk 1000000 steps.
+DAILY BUSINESS 1 - Walk 1000 steps in a single day.
+DAILY BUSINESS 2 - Walk 5000 steps in a single day.
+DAILY BUSINESS 3 - Walk 10000 steps in a single day.
+SUPERMAN - Walk 40000 steps in a single day.
+WEEKLY STREAK 1 - walk 1000 steps every day for a week.
+WEEKLY STREAK 2 - walk 2500 steps every day for a week.
+WEEKLY STREAK 3 - walk 5000 steps every day for a week.
+WEEKLY STREAK 4 - walk 10000 steps every day for a week. 
+
+Challenges:
+A QUICK WALK - Walk 1000 steps in 30 minutes - 10 POINTS
+A HIKE - Walk 5000 steps in 6 hours. - 70 POINTS
+A MARATHON - Walk 15000 steps in 24 hours - 220 POINTS
+BIG BALLER 1 - Gain 50 points in games in 1 hour - 10 POINTS
+BIG BALLER 2 - Gain 100 points in games in 1 hour - 20 POINTS
+BIG BALLER 3 - Gain 500 points in games in 1 hour - 100 POINTS 
+DAILY THOUSAND - (Once every day) Walk 1000 steps today - 5 POINTS
+
+Statistics:
+STEPS WALKED
+POINTS GAINED
+MOST STEPS IN A DAY
+BIGGEST WINNING
+HIGHEST RANK (STEPS)
+HIGHEST RANK (POINTS)
