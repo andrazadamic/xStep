@@ -27,20 +27,21 @@ class _PagesPageState extends State<PagesPage> {
       debugShowCheckedModeBanner: false,
       title: "xStep",
       home: Scaffold(
-          body: SafeArea(child: PagesPage._pages.elementAt(_selectedIndex),),
-          bottomNavigationBar: BottomNavigationBar(
-            selectedItemColor: Colors.amber.shade700,
-            items: const <BottomNavigationBarItem>[
-              BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.bar_chart), label: "Leaderboard"),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.gamepad), label: "Games"),
-            ],
-            currentIndex: _selectedIndex,
-            onTap: _onItemTapped,
-          ),
+        body: SafeArea(
+          child: PagesPage._pages.elementAt(_selectedIndex),
         ),
+        bottomNavigationBar: BottomNavigationBar(
+          selectedItemColor: Colors.amber.shade700,
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.bar_chart), label: "Leaderboard"),
+            BottomNavigationBarItem(icon: Icon(Icons.gamepad), label: "Games"),
+          ],
+          currentIndex: _selectedIndex,
+          onTap: _onItemTapped,
+        ),
+      ),
     );
   }
 

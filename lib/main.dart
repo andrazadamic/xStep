@@ -26,14 +26,12 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             children: [
               const SizedBox(height: 100),
-              Text(
-                "xStep",
-                style: GoogleFonts.rubik(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 70,
-                  color: const Color.fromRGBO(88, 135, 89, 1),
-                )
-              ),
+              Text("xStep",
+                  style: GoogleFonts.rubik(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 70,
+                    color: const Color.fromRGBO(88, 135, 89, 1),
+                  )),
               const SizedBox(height: 70),
               Padding(
                 padding: EdgeInsets.fromLTRB(40, 0, 40, 0),
@@ -43,18 +41,18 @@ class _MyAppState extends State<MyApp> {
                       "Choose your username:",
                     ),
                     TextField(
-                      decoration: InputDecoration(
-                        fillColor: Colors.amber
-                      ),
+                      decoration: InputDecoration(fillColor: Colors.amber),
                       controller: usernameController,
                     ),
                     const SizedBox(height: 30),
                     Builder(
                       builder: (context) => TextButton(
-                        onPressed: () => userLogin(usernameController.text, context),
+                        onPressed: () =>
+                            userLogin(usernameController.text, context),
                         style: ButtonStyle(
                           shadowColor: MaterialStateProperty.all(Colors.black),
-                          backgroundColor: MaterialStateProperty.all(const Color.fromRGBO(243, 193, 120, 1)),
+                          backgroundColor: MaterialStateProperty.all(
+                              const Color.fromRGBO(243, 193, 120, 1)),
                         ),
                         child: Text(
                           "ENTER",
@@ -77,10 +75,12 @@ class _MyAppState extends State<MyApp> {
 
   void userLogin(String username, BuildContext cont) {
     if (checkIfUserExists(username)) {
-      Navigator.push(cont, MaterialPageRoute(builder: (cont) => PagesPage(user: username)));
+      Navigator.push(cont,
+          MaterialPageRoute(builder: (cont) => PagesPage(user: username)));
     } else {
       createUser(username);
-      Navigator.push(cont, MaterialPageRoute(builder: (cont) => PagesPage(user: username)));
+      Navigator.push(cont,
+          MaterialPageRoute(builder: (cont) => PagesPage(user: username)));
     }
   }
 }
