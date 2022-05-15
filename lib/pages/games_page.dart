@@ -60,7 +60,7 @@ class GamesPage extends StatelessWidget {
                             child:InkWell(
                               borderRadius: BorderRadius.circular(1000.0), //Something large to ensure a circle
                               onTap: () => Navigator.push(context,
-                                  MaterialPageRoute(builder: (cont) => Coinflip())),
+                                  MaterialPageRoute(builder: (context) => Coinflip())),
                               child: Column(
                                 children: const [
                                   Text(

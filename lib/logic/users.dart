@@ -17,6 +17,11 @@ bool checkIfUserExists(String username) {
   }
 }
 
+void changePoints(int points) {
+  int res = int.parse(_users[_curr_user][2]) + points;
+  _users[_curr_user][2] = res.toString();
+}
+
 Map sort(Map users) {
   return SplayTreeMap<String, dynamic>.from(
     users, (keys1, keys2) => int.parse(users[keys2]![1]).compareTo(int.parse(users[keys1]![1]))

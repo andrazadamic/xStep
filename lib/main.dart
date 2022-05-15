@@ -1,6 +1,5 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
+import 'package:pedometer/pedometer.dart';
 import 'package:x_step/pages_page.dart';
 import 'logic/users.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -10,12 +9,15 @@ void main() => runApp(const MyApp());
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
+
   @override
   State<MyApp> createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
   TextEditingController usernameController = TextEditingController();
+  late Stream<StepCount> _stepCountStream;
+  late Stream<PedestrianStatus> _pedestrianStatusStream;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -72,6 +74,17 @@ class _MyAppState extends State<MyApp> {
         ),
       ),
     );
+  }
+
+  void onStepCount(StepCount event) {
+    /// Handle step count changed
+    changePoints(event.steps);
+    DateTime timeStamp = event.timeStamp;
+  }
+  void onPedestrianStatusChanged(PedestrianStatus event) {
+    /// Handle status changed
+    String status = event.status;
+    DateTime timeStamp = event.timeStamp;
   }
 
   void userLogin(String username, BuildContext cont) {
